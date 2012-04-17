@@ -27,12 +27,15 @@ function cf_media_rss_links() {
 		type="'.$item->post_mime_type.'"
 		width="'.$info['width'].'"
 		height="'.$info['height'].'"
-	/>
-	<media:thumbnail 
-		url="'.$thumb[0].'" 
-		width="'.$thumb[1].'" 
-		height="'.$thumb[2].'" 
-	/>
+	>
+		<media:thumbnail 
+			url="'.$thumb[0].'" 
+			width="'.$thumb[1].'" 
+			height="'.$thumb[2].'" 
+		/>
+		<media:title type="html">'.esc_html($item->post_title).'</media:title>
+		<media:description type="html">'.esc_html($item->post_content).'</media:description>
+	</media:content>
 			';
 		}
 	}
