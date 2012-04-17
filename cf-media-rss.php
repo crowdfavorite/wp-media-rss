@@ -39,4 +39,10 @@ function cf_media_rss_links() {
 }
 add_action('rss2_item', 'cf_media_rss_links');
 
+
+function cf_media_rss_ns() {
+	echo 'xmlns:media="http://search.yahoo.com/mrss"';
+}
+add_action('rss2_ns', 'cf_media_rss_ns');
+
 ?>
