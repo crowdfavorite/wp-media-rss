@@ -3,7 +3,7 @@
 /*
 Plugin Name: Media RSS Image Links
 Description: Adds media RSS elements to your RSS2 feed for images attached to posts.
-Version: 1.0
+Version: 1.1
 Author: Crowd Favorite
 Author URI: http://crowdfavorite.com
 */
@@ -41,7 +41,6 @@ function cf_media_rss_links() {
 	}
 }
 add_action('rss2_item', 'cf_media_rss_links');
-
 
 function cf_media_rss_ns() {
 	echo 'xmlns:media="http://search.yahoo.com/mrss"';
